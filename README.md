@@ -3,13 +3,13 @@
 ## Introduction
 
 This is a present I made for my Long Distance Girlfriend.
-It subscribes to a MQTT broker and displays the messages it recieves on a LCD display.
+It subscribes to an MQTT broker and displays the messages it receives on an LCD display.
 
 Features:
 
-- Display incoming messages on a LCD display
-- LED indicator (Slow Pulse means there is a message waiting)
-- Ultrasonic Sensor to detect if the Box is open -> Show last message on LCD and turn LED indicator off
+- Display incoming messages on an LCD display
+- LED indicator (a slow pulse means there is a message waiting)
+- Ultrasonic sensor to detect if the box is open -> Show last message on LCD and turn LED indicator off
 - Connect to WiFi
 
 Hardware:
@@ -23,7 +23,7 @@ Hardware:
 
 1. Clone this repo
 2. Copy `secrets.example.h` to `secrets.h` and fill in the values
-3. Upload the code to the ESP32 (fe. with Arduino IDE)
+3. Upload the code to the ESP32 (e.g., with Arduino IDE)
 
 ## Circuit
 
@@ -33,6 +33,7 @@ I sadly don't have a proper circuit diagram, but here is an image of the circuit
 
 ## Demo
 
-Short video Demo of the project. I know it's not most beautiful, but it works :D.
+Short video demo of the project. I know it's not the most beautiful, but it works :D.
 
 https://github.com/user-attachments/assets/26d945f9-6a95-49b0-be4f-e9dcd2006c4b
+
