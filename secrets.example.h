@@ -1,0 +1,9 @@
+#define WIFI_SSID <YOUR_WIFI_SSID>;
+#define WIFI_PASSWORD <YOUR_WIFI_PASSWORD>;
+
+#define MQTT_BROKER <YOUR_MQTT_BROKER_IP>;
+#define MQTT_PORT 1883;
+#define MQTT_USER <YOUR_MQTT_USERNAME>;
+#define MQTT_PASSWORD <YOUR_MQTT_PASSWORD>;
+#define MQTT_CLIENT_ID "lola-esp32";
+#define MQTT_TOPIC "couplecom/lola/recv";

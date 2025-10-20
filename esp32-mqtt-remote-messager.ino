@@ -1,6 +1,7 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include <LiquidCrystal.h>
+#include "secrets.h"
 
 // Replace with your network credentials
 const char* ssid = WIFI_SSID;
