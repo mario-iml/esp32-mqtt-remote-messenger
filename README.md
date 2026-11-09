@@ -1,39 +1,54 @@
-﻿# ESP32 MQTT Remote Messager
+# ESP32 MQTT Remote Messenger
 
-## Introduction
+A connected physical notification box powered by an ESP32. The device connects to Wi-Fi, subscribes to an MQTT topic, and alerts the user to incoming text messages using an ambient LED pulse and an ultrasonic lid-detection trigger.
 
-This is a present I made for my Long Distance Girlfriend.
-It subscribes to an MQTT broker and displays the messages it receives on an LCD display.
+## Features
 
-Features:
+- **Real-Time Messaging:** Subscribes to an MQTT broker over Wi-Fi to receive and display remote payloads on a 16x2 LCD screen.
+- **Ambient Alerting:** Visual breathing/pulse LED indicator signals unread messages.
+- **Proximity/Lid Detection:** Ultrasonic distance sensor detects when the enclosure is opened, automatically surfacing the latest message and clearing the alert state.
+- **Low-Latency Notification Loop:** Event-driven architecture handling Wi-Fi reconnects and message buffers.
 
-- Display incoming messages on an LCD display
-- LED indicator (a slow pulse means there is a message waiting)
-- Ultrasonic sensor to detect if the box is open -> Show last message on LCD and turn LED indicator off
-- Connect to WiFi
+## Hardware Components
 
-Hardware:
+- **MCU:** ESP32 Development Board
+- **Display:** 16x2 I2C / Parallel LCD Display
+- **Sensors:** HC-SR04 Ultrasonic Sensor
+- **Indicators:** Diffused LED + current-limiting resistor
+- **Peripherals:** Jumper wiring, breadboard/perfboard, 5V power supply
 
-- ESP32
-- LCD Display
-- LED
-- Ultrasonic Sensor
+## Getting Started
 
-## Setup
+### Prerequisites
 
-1. Clone this repo
-2. Copy `secrets.example.h` to `secrets.h` and fill in the values
-3. Upload the code to the ESP32 (e.g., with Arduino IDE)
+- Arduino IDE (or PlatformIO / ESP-IDF)
+- Required Arduino Libraries: `WiFi`, `PubSubClient`, `LiquidCrystal` (or `LiquidCrystal_I2C`)
 
-## Circuit
+### Installation & Flashing
 
-I sadly don't have a proper circuit diagram, but here is an image of the circuit.
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/your-username/esp32-mqtt-remote-messenger.git](https://github.com/your-username/esp32-mqtt-remote-messenger.git)
+   cd esp32-mqtt-remote-messenger
 
-![Circuit](media/circuit.png)
+```
 
-## Demo
+2. Configure network and broker credentials:
+```bash
+cp secrets.example.h secrets.h
 
-Short video demo of the project. I know it's not the most beautiful, but it works :D.
+```
+
+
+Open `secrets.h` and populate your Wi-Fi SSID, password, and MQTT broker details (broker address, port, and topic).
+3. Connect your ESP32 via USB and upload the sketch via Arduino IDE or PlatformIO.
+
+## Wiring & Schematics
+
+Refer to the breadboard layout below for pin mappings and connections:
+
+## Demonstration
+
+Video demonstration showcasing live message arrival, the pulse indicator, and ultrasonic display triggering:
 
 https://github.com/user-attachments/assets/26d945f9-6a95-49b0-be4f-e9dcd2006c4b
-
