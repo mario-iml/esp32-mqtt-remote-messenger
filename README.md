@@ -30,15 +30,12 @@ A connected physical notification box powered by an ESP32. The device connects t
    ```bash
    git clone [https://github.com/your-username/esp32-mqtt-remote-messenger.git](https://github.com/your-username/esp32-mqtt-remote-messenger.git)
    cd esp32-mqtt-remote-messenger
-
-```
+   ```
 
 2. Configure network and broker credentials:
 ```bash
 cp secrets.example.h secrets.h
-
 ```
-
 
 Open `secrets.h` and populate your Wi-Fi SSID, password, and MQTT broker details (broker address, port, and topic).
 3. Connect your ESP32 via USB and upload the sketch via Arduino IDE or PlatformIO.
@@ -46,6 +43,8 @@ Open `secrets.h` and populate your Wi-Fi SSID, password, and MQTT broker details
 ## Wiring & Schematics
 
 Refer to the breadboard layout below for pin mappings and connections:
+
+![Circuit](media/circuit.png)
 
 ## Demonstration
 
